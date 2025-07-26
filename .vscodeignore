@@ -1,0 +1,7 @@
+# exclude all
+**/*
+
+!dist
+!package.json
+!syntaxes
+!LICENSE

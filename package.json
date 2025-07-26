@@ -1,0 +1,47 @@
+{
+  "name": "vscode-qcfg-ui",
+  "displayName": "vscode-qcfg-ui",
+  "description": "My personal extension (UI)",
+  "version": "0.0.0",
+  "publisher": "QyRoN",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergei-dyshel/vscode-qcfg-ui.git"
+  },
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "enabledApiProposals": [
+    "quickPickSortByLabel",
+    "resolvers"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "license": "MIT",
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "watch": "tsc --watch --noEmit",
+    "build": "just build"
+  },
+  "dependencies": {
+    "@sergei-dyshel/typescript": "*",
+    "@sergei-dyshel/node": "*",
+    "@sergei-dyshel/vscode": "*"
+  },
+  "devDependencies": {
+    "@sergei-dyshel/prettier-config": "*",
+    "@types/circular-dependency-plugin": "^5.0.5",
+    "@types/node": "^20.8.1",
+    "@types/vscode": "^1.71.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.57.0",
+    "tsconfig-paths": "^4.0.0"
+  },
+  "contributes": {}
+}
