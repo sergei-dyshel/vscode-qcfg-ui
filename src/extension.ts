@@ -1,4 +1,9 @@
-import { Commands, ExtensionContext, ProposedApi } from "@sergei-dyshel/vscode";
+import {
+  Commands,
+  ExtensionContext,
+  ExtensionUpdateChecker,
+  ProposedApi,
+} from "@sergei-dyshel/vscode";
 import { window } from "vscode";
 import { logger, setupLogging } from "./logging";
 import { activate as activeWorkspaceHistory } from "./workspace-history";
@@ -11,6 +16,9 @@ export async function activate(context: ExtensionContext) {
   logger.info("Extension activating");
   await activeWorkspaceHistory(context);
   Commands.register();
+
+  if (!ExtensionContext.inDevelopmentMode())
+    await ExtensionUpdateChecker.register();
 }
 
 async function detectProposedApiAllowlist() {
