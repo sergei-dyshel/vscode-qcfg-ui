@@ -11,6 +11,9 @@
   "engines": {
     "vscode": "^1.71.0"
   },
+  "extensionKind": [
+    "ui"
+  ],
   "enabledApiProposals": [
     "quickPickSortByLabel",
     "quickDiffProvider",
