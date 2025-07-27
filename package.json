@@ -13,6 +13,7 @@
   },
   "enabledApiProposals": [
     "quickPickSortByLabel",
+    "quickDiffProvider",
     "resolvers"
   ],
   "categories": [
@@ -43,5 +44,19 @@
     "eslint": "^8.57.0",
     "tsconfig-paths": "^4.0.0"
   },
-  "contributes": {}
+  "contributes": {
+    "commands": [
+      {
+        "command": "qcfg.openRecent.newWindow",
+        "title": "qcfg: Open recent workspace (NEW window)"
+      },
+      {
+        "command": "qcfg.openRecent.sameWindow",
+        "title": "qcfg: Open recent workspace (SAME window)"
+      }
+    ],
+    "menus": {
+      "commandPallete": []
+    }
+  }
 }

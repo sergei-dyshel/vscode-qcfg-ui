@@ -1,4 +1,4 @@
 {
-  "extends": "@sergei-dyshel/typescript/tsconfig.json",
+  "extends": "@sergei-dyshel/vscode/tsconfig.json",
   "include": ["src/**/*.ts", "*.d.ts"]
 }
