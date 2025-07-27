@@ -27,3 +27,7 @@ async function detectProposedApiAllowlist() {
   );
   if (disposable) disposable.dispose();
 }
+
+export function deactivate() {
+  logger.info("Extension deactivating");
+}
